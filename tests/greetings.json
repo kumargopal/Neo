@@ -1,0 +1,8 @@
+[
+    { "text": "hi"               },
+    { "text": "who are you?"     },
+    { "text": "create a project hello" },
+    {"text": "open project 'hello'"},
+    {"text": "create a file hello.txt"}
+  ]
+  
