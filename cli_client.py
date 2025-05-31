@@ -39,7 +39,7 @@ class Config:
     history_size: int = 10
     debug: bool = False
 
-class EmptyAIClient:
+class NeoClient:
     """Client for interacting with the Neuro server"""
     
     def __init__(self, config: Config):
@@ -546,7 +546,7 @@ async def main():
     )
     
     # Create and start the client
-    client = EmptyAIClient(config)
+    client = NeoClient(config)
     await client.start()
 
 if __name__ == "__main__":

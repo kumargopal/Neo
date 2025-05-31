@@ -20,12 +20,12 @@ console = Console()
 # ---------------------------------------------------------------------------
 # 1.  tiny shim: pull most of the old code in unchanged
 # ---------------------------------------------------------------------------
-from cli_client import EmptyAIClient, Config        # your original file
+from cli_client import NeoClient, Config        # your original file
 
 # ---------------------------------------------------------------------------
 # 2.  Automated runner
 # ---------------------------------------------------------------------------
-class ScenarioRunner(EmptyAIClient):
+class ScenarioRunner(NeoClient):
     def __init__(self, config: Config, steps: List[Dict[str, str]]):
         super().__init__(config)
         self.steps         = steps
