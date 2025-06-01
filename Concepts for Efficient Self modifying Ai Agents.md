@@ -1,4 +1,4 @@
-# Concepts for Efficient Self modifying Ai Agents.md
+# Concepts for Efficient Self modifying Ai Agents
 
 > *A modular, self‑evolving framework for building, composing, and operating AI‑native software stacks.*
 
