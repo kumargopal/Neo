@@ -1,4 +1,4 @@
-# Concepts for Efficient Self modifying Ai Agents
+# Concepts for Efficient Self-Modifying AI Agents
 
 > *A modular, self‑evolving framework for building, composing, and operating AI‑native software stacks.*
 
@@ -6,7 +6,7 @@
 
 ## Abstract
 
-The **Neuro Ecosystem** aspires to turn *thoughts* into immediately executable software by unifying memory, logic, control‑flow, I/O, and learning within small, hot‑swappable units called **neuros**.  Neuros scale from single‑purpose scripts to full agentic systems through graph‑based composition (**Neuro‑Net**) and a purpose‑built orchestration language (**Neuro‑Lang**).  A compiler and runtime translate high‑level intent into efficient, sandboxed execution on a Linux‑based **Neuro‑OS**, while a *dream* phase continuously fine‑tunes models in the background.  The result is a local‑first platform where users and the AI co‑create code, automate workflows, and safely iterate toward increasingly capable, self‑improving systems.
+The **Neuro Ecosystem** aspires to turn *thoughts* into immediately executable software by unifying memory, logic, control‑flow, I/O, and learning within small, hot‑swappable units called **neuros**. Neuros scale from single‑purpose scripts to full agentic systems through graph‑based composition (**Neuro‑Net**) and a purpose‑built orchestration language (**Neuro‑Lang**). A compiler and runtime translate high‑level intent into efficient, sandboxed execution on a Linux‑based **Neuro‑OS**, while a *dream* phase continuously fine‑tunes models in the background. The result is a local‑first platform where users and the AI co‑create code, automate workflows, and safely iterate toward increasingly capable, self‑improving systems.
 
 ---
 
@@ -24,18 +24,18 @@ The **Neuro Ecosystem** aspires to turn *thoughts* into immediately executable s
 
 ---
 
-## 1 · Neuro
+## 1 · Neuro
 
 A **neuro** is the atomic skill unit.
 
-* **Capabilities**: memory, deterministic logic, fuzzy/ML reasoning, conditional & iterative control‐flow, parallelism, concurrency, and flexible I/O.
+* **Capabilities**: memory, deterministic logic, fuzzy/ML reasoning, conditional & iterative control‑flow, parallelism, concurrency, and flexible I/O.
 * **Interfaces**: accepts structured inputs, returns structured outputs; supports global/shared memories when required.
-* **Implementation**: typically a light Python module or a distilled transformer model.  Category‑theoretic abstractions ensure each neuro composes cleanly with others.
+* **Implementation**: typically a light Python module or a distilled transformer model. Category‑theoretic abstractions ensure each neuro composes cleanly with others.
 * **Taxonomy**: neuros can be wrapped in higher‑level *classes* for organization, versioning, and discoverability.
 
 ---
 
-## 2 · Neuro‑Net
+## 2 · Neuro‑Net
 
 The **Neuro‑Net** is a generic graph whose nodes are neuros and whose edges are data‑ or control‑dependencies.
 
@@ -45,7 +45,7 @@ The **Neuro‑Net** is a generic graph whose nodes are neuros and whose edges ar
 
 ---
 
-## 3 · Neuro‑Lang
+## 3 · Neuro‑Lang
 
 A minimal, human‑readable orchestration language.
 
@@ -63,7 +63,7 @@ A minimal, human‑readable orchestration language.
 
 ---
 
-## 4 · Neuro‑Code
+## 4 · Neuro‑Code
 
 Concrete source files written in Neuro‑Lang.
 
@@ -73,7 +73,7 @@ Concrete source files written in Neuro‑Lang.
 
 ---
 
-## 5 · Neuro‑Compiler
+## 5 · Neuro‑Compiler
 
 Translates Neuro‑Code into an executable artefact.
 
@@ -83,7 +83,7 @@ Translates Neuro‑Code into an executable artefact.
 
 ---
 
-## 6 · Neuro‑Interface
+## 6 · Neuro‑Interface
 
 A 3‑D, multimodal workspace for chatting, coding, and visualising.
 
@@ -93,17 +93,18 @@ A 3‑D, multimodal workspace for chatting, coding, and visualising.
 
 ---
 
-## 7 · Neuro‑OS
+## 7 · Neuro‑OS
 
 A thin, Linux‑kernel‑based operating layer.
 
 * **Isolation**: per‑project sandboxes secure code execution and model fine‑tuning.
 * **First‑Principles UX**: re‑imagines windows, files, and processes for AI‑native workflows and Web3 primitives.
 * **Resource Governance**: built‑in policy engine for GPU/TPU quotas, energy budgets, and privacy constraints.
+* **Task Management**: uses built‑in process abstractions and task identifiers to manage AI workloads natively and efficiently.
 
 ---
 
-## 8 · Neuro‑Dream
+## 8 · Neuro‑Dream
 
 An offline, *sleep & learn* subsystem.
 
@@ -113,12 +114,13 @@ An offline, *sleep & learn* subsystem.
 
 ---
 
-## 9 · Goals & Motivation
+## 9 · Goals & Motivation
 
 * **Abstraction → Composition**: harness category theory & functional/OOP techniques to build ever‑larger programs from simple parts.
 * **Local‑First Privacy**: keep raw data and fine‑tuned models on user hardware by default.
 * **Human‑AI Co‑creation**: shorten the loop from idea → runnable system through natural language and rich visual feedback.
 * **Continuous Learning**: balance live edits with background distillation so the platform improves without accumulating tech‑debt.
+* **Entropy‑Driven Evaluation**: use entropy as a measurement system to identify sparsity, vagueness, or inefficiency in models and workflows.
 
 ---
 
