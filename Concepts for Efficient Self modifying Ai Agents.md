@@ -1,127 +1,127 @@
 # Concepts for Efficient Self-Modifying AI Agents
 
-> *A modular, self‑evolving framework for building, composing, and operating AI‑native software stacks.*
+> *A flexible, modular platform for creating AI systems that learn, adapt, and improve themselves.*
 
 ---
 
 ## Abstract
 
-The **Neuro Ecosystem** aspires to turn *thoughts* into immediately executable software by unifying memory, logic, control‑flow, I/O, and learning within small, hot‑swappable units called **neuros**. Neuros scale from single‑purpose scripts to full agentic systems through graph‑based composition (**Neuro‑Net**) and a purpose‑built orchestration language (**Neuro‑Lang**). A compiler and runtime translate high‑level intent into efficient, sandboxed execution on a Linux‑based **Neuro‑OS**, while a *dream* phase continuously fine‑tunes models in the background. The result is a local‑first platform where users and the AI co‑create code, automate workflows, and safely iterate toward increasingly capable, self‑improving systems.
+The **Neuro Ecosystem** aims to transform high-level ideas directly into executable AI-driven software. It does this by integrating essential elements—memory, logic, decision-making, input/output management, and learning—into compact, interchangeable units called **neuros**. These units can range from simple tasks to highly complex AI-driven workflows, interconnected via a flexible network (**Neuro-Net**) and guided through a user-friendly orchestration language (**Neuro-Lang**). The system features a specialized compiler and execution environment (**Neuro-OS**) designed for efficiency and safety, alongside a "dream" component that continuously improves AI models in the background. This results in a user-friendly environment where humans and AI collaboratively build, automate, and refine powerful and adaptable software solutions.
 
 ---
 
-## Table of Contents
+## Contents
 
 1. [Neuro](#1-neuro)
-2. [Neuro‑Net](#2-neuro-net)
-3. [Neuro‑Lang](#3-neuro-lang)
-4. [Neuro‑Code](#4-neuro-code)
-5. [Neuro‑Compiler](#5-neuro-compiler)
-6. [Neuro‑Interface](#6-neuro-interface)
-7. [Neuro‑OS](#7-neuro-os)
-8. [Neuro‑Dream](#8-neuro-dream)
-9. [Goals & Motivation](#9-goals--motivation)
+2. [Neuro-Net](#2-neuro-net)
+3. [Neuro-Lang](#3-neuro-lang)
+4. [Neuro-Code](#4-neuro-code)
+5. [Neuro-Compiler](#5-neuro-compiler)
+6. [Neuro-Interface](#6-neuro-interface)
+7. [Neuro-OS](#7-neuro-os)
+8. [Neuro-Dream](#8-neuro-dream)
+9. [Goals & Motivation](#9-goals--motivation)
 
 ---
 
 ## 1 · Neuro
 
-A **neuro** is the atomic skill unit.
+A **neuro** is the basic building block of the ecosystem.
 
-* **Capabilities**: memory, deterministic logic, fuzzy/ML reasoning, conditional & iterative control‑flow, parallelism, concurrency, and flexible I/O.
-* **Interfaces**: accepts structured inputs, returns structured outputs; supports global/shared memories when required.
-* **Implementation**: typically a light Python module or a distilled transformer model. Category‑theoretic abstractions ensure each neuro composes cleanly with others.
-* **Taxonomy**: neuros can be wrapped in higher‑level *classes* for organization, versioning, and discoverability.
-
----
-
-## 2 · Neuro‑Net
-
-The **Neuro‑Net** is a generic graph whose nodes are neuros and whose edges are data‑ or control‑dependencies.
-
-* **Expressiveness**: With first‑class lambda‑calculus primitives, a Neuro‑Net can represent any Turing‑complete workflow.
-* **Search Space**: The graph itself becomes the *space of possible skills*, enabling automated planning, scheduling, and optimization.
-* **Introspection**: Each edge stores lineage metadata, making provenance and debugging straightforward.
+* **Capabilities**: stores information, executes logic, makes decisions, handles data input/output, and supports parallel tasks.
+* **Design**: clear, structured input and output; adaptable memory management.
+* **Implementation**: lightweight modules (e.g., Python scripts or simplified AI models) designed for seamless integration.
+* **Organization**: grouped into structured classes for easy discovery, updating, and reuse.
 
 ---
 
-## 3 · Neuro‑Lang
+## 2 · Neuro-Net
 
-A minimal, human‑readable orchestration language.
+**Neuro-Net** is the flexible network connecting neuros, forming a structured pathway for complex tasks.
 
-| Pillar       | Support                                  |
-| ------------ | ---------------------------------------- |
-| Memory       | local + global contexts                  |
-| Logic        | declarative & imperative constructs      |
-| Control Flow | `if / match / for / while` + async tasks |
-| I/O          | typed channels, event streams            |
-| Parallelism  | `spawn`, `await`, fan‑in/out             |
-| Concurrency  | message‑passing coroutines               |
-
-* **Natural‑Language First**: Users can describe intent colloquially; explicit grammar is available for precision.
-* **Partial Programs**: The AI can infer missing pieces or suggest completions.
+* **Flexibility**: capable of modeling any sophisticated process or workflow.
+* **Adaptability**: supports dynamic planning, resource allocation, and optimization.
+* **Transparency**: tracks connections clearly, making it easy to understand, monitor, and debug.
 
 ---
 
-## 4 · Neuro‑Code
+## 3 · Neuro-Lang
 
-Concrete source files written in Neuro‑Lang.
+A simple yet powerful language to manage and coordinate neuros.
 
-* **Structure**: declares neuros, nets, resources, and policies.
-* **Execution**: resolved into a runtime graph with memoised intermediate results.
-* **Reuse**: supports imports, version constraints, and composable libraries.
+| Feature       | Functionality                                        |
+| ------------- | ---------------------------------------------------- |
+| Memory        | Manages short-term and long-term information storage |
+| Logic         | Enables clear definition of rules and operations     |
+| Decisions     | Controls workflows and manages conditional actions   |
+| I/O           | Handles data flow effectively                        |
+| Parallelism   | Efficiently manages concurrent operations            |
+| Communication | Supports clear, structured interactions              |
 
----
-
-## 5 · Neuro‑Compiler
-
-Translates Neuro‑Code into an executable artefact.
-
-1. **Parsing & Validation** – ensures well‑typed nets and resolvable references.
-2. **Optimisation** – inlines trivial neuros, prunes dead branches, schedules parallel segments.
-3. **Targeting** – emits Python byte‑code, container specs, or specialised IR for low‑latency runtimes.
+* **Ease of Use**: natural language-oriented, minimal syntax.
+* **AI Assistance**: Automatically suggests or completes partial instructions.
 
 ---
 
-## 6 · Neuro‑Interface
+## 4 · Neuro-Code
 
-A 3‑D, multimodal workspace for chatting, coding, and visualising.
+Actual files written in Neuro-Lang.
 
-* **Modes**: desktop automation, code authoring, systems ops, data viz.
-* **Visuals**: interactive graphs, FSM overlays, and semantic zoom on modules.
-* **I/O**: voice, text, pen, gesture; multi‑threaded chat *threads* anchor conversations.
-
----
-
-## 7 · Neuro‑OS
-
-A thin, Linux‑kernel‑based operating layer.
-
-* **Isolation**: per‑project sandboxes secure code execution and model fine‑tuning.
-* **First‑Principles UX**: re‑imagines windows, files, and processes for AI‑native workflows and Web3 primitives.
-* **Resource Governance**: built‑in policy engine for GPU/TPU quotas, energy budgets, and privacy constraints.
-* **Task Management**: uses built‑in process abstractions and task identifiers to manage AI workloads natively and efficiently.
+* **Clear Structure**: defines units, workflows, resources, and execution rules.
+* **Efficiency**: optimizes workflow execution with minimal redundant operations.
+* **Reusability**: supports integration of existing code and components.
 
 ---
 
-## 8 · Neuro‑Dream
+## 5 · Neuro-Compiler
 
-An offline, *sleep & learn* subsystem.
+Converts Neuro-Code into runnable programs.
 
-* **Workflow**: periodically serialises runtime memories + code deltas → large *teacher* model → distilled back into lighter neuros.
-* **Goals**: consolidate incremental edits, reduce latency, and keep on‑device models fresh without disruptive downtime.
-* **Triggers**: user‑defined schedules or heuristic thresholds (e.g., “50 significant code mutations”).
+1. **Validation** – ensures error-free code and dependencies.
+2. **Optimization** – streamlines execution, reducing overhead.
+3. **Compilation** – produces efficient executables or ready-to-run scripts.
+
+---
+
+## 6 · Neuro-Interface
+
+An interactive workspace combining visual and textual methods for creating and managing AI workflows.
+
+* **Multiple Modes**: supports automation, coding, system management, and visual analytics.
+* **Intuitive Visualizations**: clear graphical representation of workflows and modules.
+* **Multimodal Interaction**: integrates voice, text, touch, and visual gestures.
+
+---
+
+## 7 · Neuro-OS
+
+An efficient, secure operating layer specifically designed for AI-driven tasks.
+
+* **Security**: isolates projects, protecting system stability.
+* **User Experience**: rethinks file management and workflows for AI-friendly operation.
+* **Resource Control**: intelligently manages computational resources like GPUs and energy use.
+* **Task Efficiency**: built-in management of AI processes to maximize performance.
+
+---
+
+## 8 · Neuro-Dream
+
+A background system that continuously optimizes AI models without interrupting regular operation.
+
+* **Process**: aggregates incremental changes and experiences, fine-tuning models behind the scenes.
+* **Purpose**: keeps models updated, efficient, and responsive without downtime.
+* **Trigger Mechanism**: configurable schedules or activity-based thresholds.
 
 ---
 
 ## 9 · Goals & Motivation
 
-* **Abstraction → Composition**: harness category theory & functional/OOP techniques to build ever‑larger programs from simple parts.
-* **Local‑First Privacy**: keep raw data and fine‑tuned models on user hardware by default.
-* **Human‑AI Co‑creation**: shorten the loop from idea → runnable system through natural language and rich visual feedback.
-* **Continuous Learning**: balance live edits with background distillation so the platform improves without accumulating tech‑debt.
-* **Entropy‑Driven Evaluation**: use entropy as a measurement system to identify sparsity, vagueness, or inefficiency in models and workflows.
+* **Modular Simplicity**: builds complex systems by connecting simpler, understandable components.
+* **Privacy First**: retains sensitive data and models locally.
+* **Collaborative Creativity**: facilitates human-AI co-development of software solutions.
+* **Continuous Improvement**: integrates ongoing refinement to avoid technical debt.
+* **Entropy-Based Evaluation**: measures and reduces inefficiencies, complexity, and ambiguities using entropy as a guiding principle.
 
 ---
 
-*© 2025 Neuro Project Initiative – Licensed under Apache 2.0*
+*© 2025 Neuro Project Initiative – Licensed under Apache 2.0*
