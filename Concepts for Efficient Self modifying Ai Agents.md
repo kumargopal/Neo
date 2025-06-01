@@ -1,4 +1,4 @@
-# Neuro Ecosystem – Vision & Module Index
+# Concepts for Efficient Self modifying Ai Agents.md
 
 > *A modular, self‑evolving framework for building, composing, and operating AI‑native software stacks.*
 
