@@ -23,8 +23,22 @@ async def run(state, *, goal, catalogue, intent=None):
         "neuros": catalogue,
         "history": hist
     }
+    
+    # ── "Video" keyword check ───────────────────────────────────────
+    # If user says "create video …" or "generate video …", directly call video_generator.
+    lower_goal = goal.lower().strip() if goal else ""
+    if any(lower_goal.startswith(k) for k in ("create video", "generate video", "make video", "video about")):
+        return {"plan": {
+            "ok": True,
+            "flow": {
+                "name": "video_generator",
+                "params": {"text": goal}
+            },
+            "missing": [],
+            "question": None
+        }}
 
-    # ── log prompt & model output ────────────────────────────────
+    # ── Otherwise fall back to your normal LLM‐driven planner ─────────
     ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
     log_dir = pathlib.Path("logs") / "prompts"
     log_dir.mkdir(parents=True, exist_ok=True)

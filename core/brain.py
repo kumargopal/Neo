@@ -36,9 +36,9 @@ class Brain:
   
 
     def _profile_cfg(self, cid):
-        # first time: default to “code_dev”
+        # first time: default to “general”
         if cid not in self.active_profile:
-            self.active_profile[cid] = "code_dev"
+            self.active_profile[cid] = "general"
         name = self.active_profile[cid]
         # cache load
         if cid not in self.profile_cfg:
